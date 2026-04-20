@@ -2,31 +2,40 @@
 <html>
 <head>
     <title>Our Memories ❤️</title>
+
     <style>
         body {
-            font-family: Arial;
-            background: #ffe6f0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
             text-align: center;
         }
+
         h1 {
-            color: #ff4d88;
+            color: white;
+            padding: 20px;
         }
-        img {
-            width: 250px;
-            border-radius: 10px;
-            margin: 10px;
-        }
+
         .box {
             background: white;
-            padding: 15px;
-            margin: 20px;
-            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        img {
+            width: 250px;
+            border-radius: 15px;
+            margin: 10px;
         }
     </style>
 
     <script>
-    let pass = prompt("Enter password");
-    if(pass !== "1234"){
+    let pass = prompt("Enter our secret ❤️");
+    if(pass !== "love123"){
         document.body.innerHTML = "Access Denied";
     }
     </script>
@@ -35,6 +44,25 @@
 <body>
 
 <h1>Our Memories ❤️</h1>
+
+<div class="box">
+    <h2>Our Story 💕</h2>
+    <p>Write your beautiful story here...</p>
+</div>
+
+<div class="box">
+    <h2>Our Photos 📸</h2>
+    <img src="pic1.jpg">
+    <img src="pic2.jpg">
+</div>
+
+<div class="box">
+    <h2>Special Messages 💌</h2>
+    <p>You mean everything to me ❤️</p>
+</div>
+
+</body>
+</html><h1>Our Memories ❤️</h1>
 
 <div class="box">
     <h2>First Memory</h2>
