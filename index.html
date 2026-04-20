@@ -2,43 +2,65 @@
 <html>
 <head>
     <title>Our Memories ❤️</title>
+
     <style>
         body {
-            font-family: Arial;
-            background: #ffe6f0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
             text-align: center;
         }
+
         h1 {
-            color: #ff4d88;
+            color: white;
+            padding: 20px;
         }
+
+        .box {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
         img {
-            width: 250px;
+            width: 200px;
             border-radius: 10px;
             margin: 10px;
         }
-        .box {
-            background: white;
-            padding: 15px;
-            margin: 20px;
-            border-radius: 10px;
+
+        /* Hearts */
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 20px;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
         }
     </style>
-
-    <script>
-    let pass = prompt("Enter password");
-    if(pass !== "1234"){
-        document.body.innerHTML = "Access Denied";
-    }
-    </script>
 </head>
 
 <body>
+
+<script>
+let pass = prompt("Enter password ❤️");
+if(pass !== "love123"){
+    document.body.innerHTML = "Access Denied";
+}
+</script>
 
 <h1>Our Memories ❤️</h1>
 
 <div class="box">
     <h2>Our Story 💕</h2>
-    <p> Cindrella Story 😂 </p>
+    <p>Write your story here...</p>
 </div>
 
 <div class="box">
@@ -49,32 +71,26 @@
 
 <div class="box">
     <h2>Special Messages 💌</h2>
-    <p> </p>
+    <p>You mean everything to me ❤️</p>
 </div>
 
-</body>
-</html><h1>Our Memories ❤️</h1>
+<script>
+// Hearts (safe version)
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
 
-<div class="box">
-    <h2>First Memory</h2>
-    <p> The Time Of Our First Meet-8:15AM💖 </p>
-</div>
+    document.body.appendChild(heart);
 
-<div class="box">
-    <h2>Photos</h2>
-    <img src="IMG-20260407-WA0008.jpg">
-    <img src="IMG-20260407-WA0009.jpg">
-    <img src="IMG-20260407-WA0002.jpg">
-    <img src="IMG-20260407-WA0004.jpg">
-    <img src="IMG-20260407-WA0005.jpg">
-    <img src="IMG-20260407-WA0010.jpg">
-    <img src="IMG-20260412-WA0005.jpg">
-</div>
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
 
-<div class="box">
-    <h2>Messages</h2>
-    <p>Your private messages ❤️</p>
-</div>
+setInterval(createHeart, 800);
+</script>
 
 </body>
 </html>
