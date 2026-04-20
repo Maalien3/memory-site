@@ -6,35 +6,63 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
             margin: 0;
             text-align: center;
-            overflow-x: hidden;
         }
 
         h1 {
             color: white;
-            padding: 30px;
-            font-size: 36px;
+            padding: 20px;
         }
 
         .box {
-            background: rgba(255,255,255,0.9);
+            background: white;
             margin: 20px auto;
             padding: 20px;
-            border-radius: 20px;
+            border-radius: 15px;
             width: 80%;
             max-width: 500px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         img {
-            width: 45%;
+            width: 250px;
             border-radius: 15px;
             margin: 10px;
         }
+    </style>
 
-        /* ❤️ Falling hearts */
+    <script>
+    let pass = prompt("Enter our secret ❤️");
+    if(pass !== "love123"){
+        document.body.innerHTML = "Access Denied";
+    }
+    </script>
+</head>
+
+<body>
+
+<h1>Our Memories ❤️</h1>
+
+<div class="box">
+    <h2>Our Story 💕</h2>
+    <p>Write your beautiful story here...</p>
+</div>
+
+<div class="box">
+    <h2>Our Photos 📸</h2>
+    <img src="pic1.jpg">
+    <img src="pic2.jpg">
+</div>
+
+<div class="box">
+    <h2>Special Messages 💌</h2>
+    <p>You mean everything to me ❤️</p>
+</div>
+
+</body>
+</html>        /* ❤️ Falling hearts */
         .heart {
             position: fixed;
             top: -10px;
