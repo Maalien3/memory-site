@@ -49,6 +49,18 @@ setInterval(() => {
   }, 6000);
 }, 500);
     </script>
+    <script>
+function enterSite() {
+  // Play music
+  document.getElementById("bgMusic").play();
+
+  // Hide entry screen
+  document.getElementById("entryScreen").style.display = "none";
+
+  // Show main content
+  document.getElementById("mainContent").style.display = "block";
+}
+    </script>
 </head>
 
 <body>
