@@ -1,131 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Our Memories ❤️</title>
+<script>
+let pass = prompt("Enter our secret ❤️");
+if(pass !== "love123"){
+    document.body.innerHTML = "Access Denied";
+}
 
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            margin: 0;
-            text-align: center;
-        }
+// Run only after page loads
+window.onload = function() {
 
-        h1 {
-            color: white;
-            padding: 20px;
-        }
-
-        .box {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 15px;
-            width: 80%;
-            max-width: 500px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        img {
-            width: 250px;
-            border-radius: 15px;
-            margin: 10px;
-        }
-    </style>
-
-    <script>
-    let pass = prompt("Enter our secret ❤️");
-    if(pass !== "love123"){
-        document.body.innerHTML = "Access Denied";
-    }
-    </script>
-</head>
-
-<body>
-
-<h1>Our Memories ❤️</h1>
-
-<div class="box">
-    <h2>Our Story 💕</h2>
-    <p>Write your beautiful story here...</p>
-</div>
-
-<div class="box">
-    <h2>Our Photos 📸</h2>
-    <img src="pic1.jpg">
-    <img src="pic2.jpg">
-</div>
-
-<div class="box">
-    <h2>Special Messages 💌</h2>
-    <p>You mean everything to me ❤️</p>
-</div>
-
-</body>
-</html>        /* ❤️ Falling hearts */
-        .heart {
-            position: fixed;
-            top: -10px;
-            color: red;
-            font-size: 20px;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-    </style>
-
-    <script>
-    let pass = prompt("Enter our secret ❤️");
-    if(pass !== "love123"){
-        document.body.innerHTML = "Access Denied";
-    }
-
-    // Create hearts
     function createHeart() {
         const heart = document.createElement("div");
         heart.classList.add("heart");
         heart.innerHTML = "❤️";
 
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+        heart.style.animationDuration = (4 + Math.random() * 3) + "s";
 
         document.body.appendChild(heart);
 
         setTimeout(() => {
             heart.remove();
-        }, 8000);
+        }, 7000);
     }
 
-    setInterval(createHeart, 300);
-    </script>
-</head>
-
-<body>
-
-<h1>Our Memories ❤️</h1>
-
-<div class="box">
-    <h2>Our Story 💕</h2>
-    <p>Write your beautiful story here...</p>
-</div>
-
-<div class="box">
-    <h2>Our Photos 📸</h2>
-    <img src="pic1.jpg">
-    <img src="pic2.jpg">
-</div>
-
-<div class="box">
-    <h2>Special Messages 💌</h2>
-    <p>You mean everything to me ❤️</p>
-</div>
-
-</body>
-</html>    let pass = prompt("Enter our secret ❤️");
+    // Create limited hearts (no infinite loop issue)
+    for (let i = 0; i < 20; i++) {
+        setTimeout(createHeart, i * 300);
+    }
+};
+</script>    let pass = prompt("Enter Password ❤️");
     if(pass !== "love123"){
         document.body.innerHTML = "Access Denied";
     }
