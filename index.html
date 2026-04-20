@@ -49,19 +49,7 @@ setInterval(() => {
   }, 6000);
 }, 500);
     </script>
-    <script>
-function enterSite() {
-  // Play music
-  document.getElementById("bgMusic").play();
-
-  // Hide entry screen
-  document.getElementById("entryScreen").style.display = "none";
-
-  // Show main content
-  document.getElementById("mainContent").style.display = "block";
-}
-    </script>
-</head>
+    </head>
 
 <body>
 
@@ -95,23 +83,7 @@ function enterSite() {
     <audio controls>
       <source src="Audio.mp3" type="audio/mpeg">
     </audio>
-    <!-- Entry Screen -->
-<div id="entryScreen">
-  <h1>💖 Welcome 💖</h1>
-  <button onclick="enterSite()">Enter ❤️</button>
+  
 </div>
-
-<!-- Main Content (hidden first) -->
-<div id="mainContent" style="display:none;">
-  <h1>❤️ Our Love Story ❤️</h1>
-  <p>Every moment with you is special 💕</p>
-</div>
-
-<!-- Music -->
-<audio id="bgMusic" loop>
-  <source src="Song.mp3" type="audio/mpeg">
-</audio>
-</div>
-
 </body>
 </html>
